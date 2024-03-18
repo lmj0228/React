@@ -1,7 +1,6 @@
 import MyList from "./MyList"
 import listData from "./MyListData.json";
 export default function MyListMain() {
-
     console.log(listData)
 
     const myItems = listData.map( item =>
