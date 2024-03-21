@@ -4,6 +4,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { useState } from "react";
 
 export default function BoxOfficeTb() {
+    //영화 목록을 json에서 가져오기
     const BoxList = BoxOfficeData.boxOfficeResult.dailyBoxOfficeList
     console.log("BoxList=", BoxList)
 
@@ -12,6 +13,8 @@ export default function BoxOfficeTb() {
 
     const handleClick = (mv) => {
         console.log(mv)
+        // 할당연산자로 state 변수 변경 불가 => 업데이트 함수 변경 
+        // selMv = mv ;
         setSelMv(mv);
     }
 
