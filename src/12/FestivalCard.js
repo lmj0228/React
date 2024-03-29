@@ -1,5 +1,5 @@
 
-export default function GalleryCard({ imgUrl, title, ptitle, ktag }) {
+export default function FestivalCard({ imgUrl, title, ptitle, ktag }) {
 
     if (ktag.includes(',')) {
         ktag = ktag.split(',').map(item =>

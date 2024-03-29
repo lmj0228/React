@@ -1,17 +1,30 @@
 import { useState, useEffect, useRef } from "react";
+import FestivalCard from './FestivalCard';
 
-export default function Festival() {
+export default function FestivalMain() {
     //부산축제 전체 데이터
     const [tdata, setTdata] = useState();
     const [guname, setGuname] = useState();
     const [opTags, SetOpTags] = useState();
+    const [cardTags, SetCardTags] = useState();
 
     //select 값
     const selRef = useRef();
 
     //select 선택
     const handleSelGu = () => {
-        console.log(selRef.current.value)
+       console.log(selRef.current.value)
+
+        let tm = tdata.filter(item => item.GUGUN_NM === selRef.current.value)
+        .map(item =>
+            <FestivalCard key={item.UC_SEQ}
+                        imgUrl={item.MAIN_IMG_THUMB}
+                        title={item.TITLE}
+                        ptitle={item.SUBTITLE}
+                        ktag={item.TRFC_INFO} />
+        );
+
+        SetCardTags(tm);
     }
 
     //실제 fetch
@@ -63,7 +76,7 @@ export default function Festival() {
             <form className="w-3/5 mx-auto flex
                             mt-10
                             justify-center items-center">
-                <label htmlfor="gu"
+                <label htmlFor="gu"
                     className="w-1/3 block mb-2 text-lg 
                                 font-bold text-gray-900">부산축제 정보 선택</label>
                 <select id="gu"
@@ -78,6 +91,10 @@ export default function Festival() {
                     {opTags}
                 </select>
             </form>
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+                            p-2 gap-2">
+                {cardTags}
+            </div>
         </div>
     )
 }

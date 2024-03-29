@@ -16,7 +16,7 @@ import { FaHome } from "react-icons/fa";
 //import BoxOffice from './05/BoxOffice';
 //import GalleryCard from './11/GalleryCard' ;
 //import GalleryMain from './11/GalleryMain';
-import Festival from './12/Festival';
+import FestivalMain from './12/FestivalMain';
 
 function App() {
 
@@ -39,7 +39,7 @@ function App() {
                        justify-center items-center
                        p-5
                       '>
-        <Festival />
+        <FestivalMain />
       </main>
       <footer className='flex justify-center items-center
                           h-20 bg-slate-800
