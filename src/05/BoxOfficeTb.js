@@ -5,8 +5,8 @@ import { useState } from "react";
 
 export default function BoxOfficeTb() {
     //영화 목록을 json에서 가져오기
-    const BoxList = BoxOfficeData.boxOfficeResult.dailyBoxOfficeList
-    console.log("BoxList=", BoxList)
+    const boxList = BoxOfficeData.boxOfficeResult.dailyBoxOfficeList
+    console.log("BoxList=", boxList)
 
     //state 변수
     const [selMv, setSelMv] = useState();
@@ -18,7 +18,7 @@ export default function BoxOfficeTb() {
         setSelMv(mv);
     }
 
-    const trs = BoxList.map(item =>
+    const trs = boxList.map(item =>
         <tr key={item.movieCd}
             onClick={() => { handleClick(item) }}
             className="h-10 p-2

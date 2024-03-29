@@ -10,7 +10,13 @@ import { FaHome } from "react-icons/fa";
 // import Lotto from './06/Lotto';
 //import FoodMain from './07/FoodMain';
 //import MyClock from './08/MyClock';
-import TrafficMain from './09/TrafficMain' ;
+//import TrafficMain from './09/TrafficMain' ;
+//import RefVal from './10/RefVal';
+//import RefInput from './10/RefInput';
+//import BoxOffice from './05/BoxOffice';
+//import GalleryCard from './11/GalleryCard' ;
+//import GalleryMain from './11/GalleryMain';
+import Festival from './12/Festival';
 
 function App() {
 
@@ -31,8 +37,9 @@ function App() {
       </header>
       <main className='grow flex flex-col 
                        justify-center items-center
+                       p-5
                       '>
-        <TrafficMain />
+        <Festival />
       </main>
       <footer className='flex justify-center items-center
                           h-20 bg-slate-800
