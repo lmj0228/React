@@ -10,8 +10,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 // import MyListMain from './04/MyListMain';
 // import BoxOfficeTb from './05_1/BoxOfficeTb';
 import BoxOffice from './05/BoxOffice';
-import Lotto from './06/Lotto';
-import FoodMain from './07/FoodMain';
+//import Lotto from './06/Lotto';
+//import FoodMain from './07/FoodMain';
 import MyClock from './08/MyClock';
 // import TrafficMain from './09/TrafficMain' ;
 // import RefVal from './10/RefVal';
@@ -24,6 +24,8 @@ import Frcst from './14/Frcst';
 //import UltraSrtFcst from './14/UltraSrtFcst';
 //import VilageFcst from './14/VilageFcst';
 import FrcstList from './14/FrcstList' ;
+//import Recoil1 from './15/Recoil1';
+import RecoilMain from './15/RecoilMain';
 
 function App() {
 
@@ -43,13 +45,7 @@ function App() {
           <div>리액트실습</div>
           <div className='flex justify-end'>
             <div className='mx-2 p-2 hover:bg-blue-400 rounded-md'>
-              <Link to='/lotto'>로또</Link>
-            </div>
-            <div className='mx-2 p-2 hover:bg-blue-400 rounded-md'>
               <Link to='/box'>박스오피스</Link>
-            </div>
-            <div className='mx-2 p-2 hover:bg-blue-400 rounded-md'>
-              <Link to='/food'>푸드</Link>
             </div>
             <div className='mx-2 p-2 hover:bg-blue-400 rounded-md'>
               <Link to='/gallery'>갤러리</Link>
@@ -59,6 +55,9 @@ function App() {
             </div>
             <div className='mx-2 p-2 hover:bg-blue-400 rounded-md'>
               <Link to='/frcst'>예보</Link>
+            </div>
+            <div className='mx-2 p-2 hover:bg-blue-400 rounded-md'>
+              <Link to='/r1'>Recoil1</Link>
             </div>
           </div>
           <div>
@@ -70,15 +69,14 @@ function App() {
                         justify-center items-center'>
           <Routes>
             <Route path='/' element={<MyClock />} />
-            <Route path='/lotto' element={<Lotto />} />
             <Route path='/box' element={<BoxOffice />} />
-            <Route path='/food' element={<FoodMain />} />
             <Route path='/gallery' element={<GalleryMain />} />
             <Route path='/festival' element={<FestivalMain />} />
             <Route path='/frcst' element={<Frcst />} />
             {/* <Route path='/ultra/:dt/:area/:x/:y' element={<UltraSrtFcst />} />
             <Route path='/vilage/:dt/:area/:x/:y' element={<VilageFcst />} /> */}
             <Route path='/flist' element={<FrcstList />} />
+            <Route path='/r1' element={<RecoilMain />} />
           </Routes>
         </main>
 
